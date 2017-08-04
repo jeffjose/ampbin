@@ -144,6 +144,18 @@ footer { font-size:.8em; margin: $spacing; }
 /*-------------------------------------------------------*/
 // Modal
 
+.modal {
+  position: absolute;
+  top:10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width:50%;
+  height:50%;;
+  background: rgba(200, 200, 200, 0.9);
+  z-index: 99;
+}
+
 /*-------------------------------------------------------*/
 // Editor :)
 
