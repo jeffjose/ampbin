@@ -5,7 +5,28 @@ import { Helper } from './helper';
 import { Database } from './database';
 import { Notifications } from './notifications';
 import { UserInterface } from './userinterface';
+var results;
+  var validationStatusEl = document.getElementById('validation-status');
+  var validationStatus = function(status) {
+    validationStatusEl.innerHTML = status;
+    if(status === 'FAIL') {
+        validationStatusEl.style.background = '#D50000';
+    } else {
+        validationStatusEl.style.background = '#33691E';
+    }
+  };
+  var copy = document.getElementById('copy');
 
+  Jotted.plugin('ampbin', function(jotted, options) {
+    jotted.on('change', function(params, callback) {
+      copy.value = params.content;
+      if(params.content.length > 0) {
+        results = amp.validator.validateString(params.content);
+        validationStatus(results.status);
+      }
+      callback(null, params);
+    });
+  });
 let options = {
   files: [{
     type: 'html'
@@ -31,3 +52,7 @@ modal.addList([
   {'name': 'tadd'}
 ]);
 modal.show();
+
+modal.modal.onclick = function() {
+  modal.hide();
+};
