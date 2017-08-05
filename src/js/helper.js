@@ -1,14 +1,14 @@
 export class Helper {
-  i(elId) {
+  id(elId) {
     return document.getElementById(elId);
   }
-  c(elClass) {
+  class(elClass) {
     return document.getElementsByClassName(elClass);
   }
-  n(elType) {
+  create(elType) {
     return document.createElement(elType);
   }
-  t(text) {
+  text(text) {
     return document.createTextNode(text);
   }
 }
