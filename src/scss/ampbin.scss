@@ -154,6 +154,8 @@ footer { font-size:.8em; margin: $spacing; }
   height:50%;;
   background: rgba(200, 200, 200, 0.9);
   z-index: 99;
+  overflow-y: auto;
+  padding:20px;
 }
 
 /*-------------------------------------------------------*/
