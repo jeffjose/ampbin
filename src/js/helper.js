@@ -5,4 +5,10 @@ export class Helper {
   c(elClass) {
     return document.getElementsByClassName(elClass);
   }
+  n(elType) {
+    return document.createElement(elType);
+  }
+  t(text) {
+    return document.createTextNode(text);
+  }
 }

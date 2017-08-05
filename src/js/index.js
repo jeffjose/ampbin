@@ -28,3 +28,7 @@ let userinterface = new UserInterface(users);
 ampbin.addSaveHandler();
 
 let modal = new Modal('modal', new Helper());
+modal.addList([
+  {'name': 'levi'},
+  {'name': 'tadd'}
+]);
