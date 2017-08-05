@@ -2,6 +2,8 @@ require('../../node_modules/mithril/mithril.js');
 
 import { Ampbin } from './ampbin';
 import { Users } from './users';
+import { Modal } from './modal';
+import { Helper } from './helper';
 import { Database } from './database';
 import { Notifications } from './notifications';
 import { UserInterface } from './userinterface';
@@ -24,3 +26,5 @@ let users = new Users(ampbin);
 let userinterface = new UserInterface(users);
 
 ampbin.addSaveHandler();
+
+let modal = new Modal('modal', new Helper());
