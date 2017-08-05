@@ -1,3 +1,5 @@
+require('../../node_modules/mithril/mithril.js');
+
 import { Ampbin } from './ampbin';
 import { Users } from './users';
 import { Database } from './database';
