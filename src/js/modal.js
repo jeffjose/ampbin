@@ -4,6 +4,14 @@ export class Modal {
     this.modal = helper.id(modalId);
   }
 
+  show() {
+    this.modal.classList.add('show');
+  }
+
+  hide() {
+    this.modal.classList.remove('show');
+  }
+
   addList(listItemsObject) {
     let ul = this.helper.create('ul');
     let li;

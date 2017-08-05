@@ -30,3 +30,4 @@ modal.addList([
   {'name': 'levi'},
   {'name': 'tadd'}
 ]);
+modal.show();
